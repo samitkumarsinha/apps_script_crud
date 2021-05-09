@@ -1,4 +1,15 @@
+/*
+  use REQUEST_URI instead of get and call using /students.php/11
+  $url = $_SERVER['REQUEST_URI'];
+  $url = explode("/", $url);
+  $id = $url[count($url) - 1];
+  if($id === 'students.php') $id = '';
+  switch($method){
+      case "GET":
+          // $id = $_GET['id'];
+          if(empty($id) || $id === '/'){ //if user send id
 
+*/
 function getStudents() {
   var url = "http://samitsinha.ueuo.com/students.php?id=11";
   // var url = "http://samitsinha.ueuo.com/students.php";
